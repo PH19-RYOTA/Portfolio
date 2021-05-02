@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+   <!-- 基本メタタグ -->
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width,initial-scale=1.0">
+
+   <!-- SEO対策 -->
+   <title>YamaRyoPortfolio</title>
+   <link rel="icon" href="./asset/img/ryota_logo.png">
+   <meta name="descriptions" content="山本涼太のポートフォリオサイトです。
+      22卒 絶賛就活中です。
+      ゲーム制作をはじめ、Web制作やライブ演出、動画編集など様々なクリエイティブコンテンツに
+      挑戦しています。"
+   >
+   
+   <!--style.cssの読み込み-->
+   <link rel="stylesheet" href="./asset/css/style.css">
+   <!--jQuery.jsの読み込み-->
+   <script type="text/javascript" src="http://code.jquery.com/jquery-3.1.0.min.js"></script>
+   
+   <!--スムーズスクロール実装-->
+   <script>
+      $(function(){
+        // #で始まるリンクをクリックしたら実行されます
+        $('a[href^="#"]').click(function() {
+          // スクロールの速度
+          let speed = 700; // ミリ秒で記述
+          let href= $(this).attr("href");
+          let target = $(href == "#" || href == "" ? 'html' : href);
+          let position = target.offset().top;
+          $('body,html').animate({scrollTop:position}, speed, 'swing');
+          return false;
+        });
+      });
+    </script>
+</head>
+<body>
+   <header>
+      <h1 class="headline">
+         <a>YAMARYO PORTFOLIO</a>
+      </h1>
+      <nav class="pc-navi">
+         <ul class="h_menu">
+            <li class="drawer-item">
+               <a href="#">Home</a>
+            </li>
+            <li class="drawer-item">
+               <a href="#About">About</a>
+            </li>
+            <li class="drawer-item">
+               <a href="#Skills">Skills</a>
+            </li>
+            <li class="drawer-item">
+               <a href="#Works">Works</a>
+            </li>
+            <li class="drawer-item">
+               <a href="#Contact">Contact</a>
+            </li>
+         </ul>
+      </nav>
+      <div class="drawer">
+         <!-- ハンバーガーメニューの表示・非表示を切り替えるチェックボックス -->
+         <input type="checkbox" id="drawer-check" class="drawer-hidden">
+         <!-- ハンバーガーアイコン-->
+         <label for="drawer-check" class="drawer-open"><span></span></label>
+         <!-- メニュー -->
+         <nav class="drawer-list"> 
+            <li class="drawer-item">
+               <a href="#">Home</a>
+            </li>
+            <li class="drawer-item">
+               <a href="#About">About</a>
+            </li>
+            <li class="drawer-item">
+               <a href="#Skills">Skills</a>
+            </li>
+            <li class="drawer-item">
+               <a href="#Works">Works</a>
+            </li>
+            <li class="drawer-item">
+               <a href="#Contact">Contact</a>
+            </li>
+         </nav>
+      </div>
+   </header>
+
+   <main>
+      <div class="top_view" id="#">
+         <div class="top_container">
+            <video style="max-width: 100%;" preload="none" muted="" autoplay="" playsinline="">
+               <source src="./asset/video/yt1s.com - EMMA WAHLIN  Make A Move Lyric Video.mp4" type="video/mp4">
+            </video>
+            <img src="./asset/img/header_logo.png" alt="">
+         </div>
+         <div class="top_ttl"></div>
+      </div>
+
+      <!-- ABOUT -->
+      <section class="about" id="About">
+         <div class="container">
+            <h1>ABOUT</h1><hr><br>
+         </div>
+         <div class="body_home">
+            <div class="text_home">
+               <p class="about_ttl">挑戦が創り出す</p>
+               <p class="about_description">
+                  山本涼太は好奇心と行動力を武器に、<br>
+                  クリエイティブなモノづくりに挑戦しています。
+               </p>
+               <div class="btn">
+                  <a class="btn-box">詳しくはこちらから</a>
+               </div>
+            </div>
+         </div>
+      </section>
+
+      <!-- SKILLS -->
+      <section class="skills" id="Skills">
+         <div class="container">
+            <div class="skills_heading">
+               <h1>SKILLS</h1><hr>
+               <p class="skills_ttl">様々な分野で活躍</p>
+            </div>
+         </div>
+            <ul class="list_skills">
+               <li>
+                  <img src="./asset/img/game_256px.png" alt="">
+                  <p>GAME</p>
+               </li>
+               <li>
+                  <img src="./asset/img/web_256px.png" alt="">
+                  <p>WEB</p>
+               </li>
+               <li>
+                  <img src="./asset/img/movie_256px.png" alt="">
+                  <p>MOVIE</p>
+               </li>
+               <li>
+                  <img src="./asset/img/sns_256px.png" alt="">
+                  <p>SNS</p>
+               </li>
+            </ul>
+            <div class="text_home">
+               <p class="skills_description">
+                  その他に、新規事業の考案なども興味があります。
+               </p>
+            </div>
+      </section>
+
+      <!-- WORKS -->
+      <section class="works" id="Works">
+         <div class="container">
+            <div class="works_heading1">
+               <h1>WORKS</h1><hr><br>
+               <p class="works_ttl">好奇心から作る制作物</p>
+            </div>
+         </div>
+         <div class="body_home">
+            <div class="text_home">
+               <div class="layout_2_div">
+                  <div class="works_img">
+                     <img src="./asset/img/ryota_logo.png" alt="">
+                  </div>
+                  <div>
+                     <p class="work_list">
+                        ≪ゲーム開発≫<br>
+                        <ol>
+                           <li class="work_list"><a href="https://ph19-ryota.github.io/STOPLINE/" target="_blank"><u>ハイパーカジュアルゲーム</u></a></li>
+                           <li class="work_list">アクションゲーム</li>
+                           <li class="work_list">音声認識ゲーム</li>
+                           <li class="work_list">ホラーゲーム</li>
+                           <li class="work_list">ミニゲーム</li>
+                           <li class="work_list">音ゲー</li>
+                        </ol>
+                     </p><br>
+                     <p class="work_list">
+                        ≪Web開発≫<br>
+                        <ol>
+                           <li class="work_list"><a href="#Works"><u>当サイト</u></a></li>
+                        </ol>
+                     </p><br>
+                     <p class="work_list">
+                        ≪動画制作≫<br>
+                        <ol>
+                           <li class="work_list">Unity:Portfolio PV</a></li>
+                           <li class="work_list"><a href="https://youtu.be/VkmU-8ZxoQk" target="_blank"><u>Unity:DAYBREAK FRONTLINE</u></a>
+                        </ol>
+                     </p>
+                  </div>
+               </div>
+               <div class="btn">
+                  <a href="./works.html" class="btn-box">過去の作品はこちら</a>
+               </div>
+            </div>
+         </div>
+      </section>
+
+      <!-- CONTACT -->
+      <section class="contact" id="Contact">
+         <div class="container">
+            <div class="contact_heading">
+               <h1>CONTACT</h1><hr>
+               <p class="contact_ttl">
+                  絶賛就活中
+               </p>
+            </div>
+            <div class="body_home">
+               <div class="text_home">
+                  <div>
+                     <p class="contact_description">
+                        22卒 就活生です<br>
+                        私に少しでも興味を持って頂いた企業様がいましたら、<br>
+                        下記よりご連絡下さい。
+                     </p>
+                  </div>
+                  <div class="btn2">
+                     <a href="" class="btn-box2">お問い合わせはこちらから</a>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </section>
+   </main>
+   <footer>
+      <div class="container">
+         <p class="copyright">
+            Copyright Ⓒ 2021 Created by YamamotoRyota
+         </p>
+      </div>
+   </footer>
+</body>
+</html>
