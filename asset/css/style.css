@@ -524,7 +524,7 @@
 
    .copyright {
        font: 300 14px/1em 'Noto Sans JP', 'noto sans japanese',sans-serif;
-       margin: 40px 0 0;
+       margin: 10px 0 0;
    }
 
 }
@@ -998,5 +998,9 @@
        margin: 40px 0 0;
    }
    
+   .copyright img
+   {
+       
+   }
    
 }
