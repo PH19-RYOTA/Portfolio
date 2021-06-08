@@ -312,6 +312,10 @@
    {
        color: #fff;
    }
+
+   .layout_2_div img{
+       text-align: center;
+   }
    
    .layout_2_div .description {
        color: #FFF;
