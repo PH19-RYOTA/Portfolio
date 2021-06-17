@@ -8,6 +8,7 @@ body {
 	animation: bggradient 20s ease infinite;
    font-family: 'Codystar', cursive;
    font-family: 'Raleway Dots', cursive;  
+   overflow-x: hidden;
 }
 
 @keyframes bggradient{
@@ -21,6 +22,23 @@ body {
 		background-position: 0% 50%;
 	}
 }
+
+/*========= レスポンシブCSS ===============*/
+@media screen and (max-width: 768px){
+   body{
+      width: 100%;
+      margin: 10px;
+      padding: 0;
+      background-color: #3bade3;
+   }
+
+   h1{
+      margin: 0;
+      padding: 0;
+      width: 100%;
+   }
+
+};
 
 /*========= 粒子テキストCSS ===============*/
 #wrapper{
@@ -187,10 +205,53 @@ opacity: 1;
    width: 30%;
 }
 
+/*========= アニメーションCSS ===============*/
+/* フェードイン */
+.fadeIn{
+   animation-name: fadeInAnime;
+   animation-duration: 1s;
+   animation-fill-mode: forwards;
+   opacity: 0;
+}
+@keyframes fadeInAnime{
+   from{
+      opacity: 0;
+   }
+   to{
+      opacity: 1;
+   }
+}
+
+/* 下から */
+.fadeUp{
+   animation-name: fadeUpAnime;
+   animation-duration: 0.5s;
+   animation-fill-mode: forwards;
+   opacity: 0;
+}
+@keyframes fadeUpAnime{
+   from{
+      opacity: 0;
+      transform: translateY(100px);
+   }
+   to{
+      opacity: 1;
+      transform: translateY(0);
+   }
+}
+
 /*========= スタイルシートCSS ===============*/
 h1{
-   font-size: 100px;
+   font-size: 80px;
    color: #fff;
    text-align: center;
    font-weight: normal;
+}
+
+.game,.web,.vr,.video,footer{
+   text-align: center;
+}
+
+small{
+   color: #fff;
 }
